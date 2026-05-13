@@ -1,14 +1,48 @@
 import Link from 'next/link';
-
-export const VIN_NOT_FOUND_MESSAGE =
-  "We couldn't find any data for this VIN. Please double-check that it contains 17 characters and try again.";
+import { ink } from '@/components/inkwell/tokens';
 
 export default function NotFound() {
   return (
-    <div className="rounded-xl bg-white p-10 text-center shadow-sm">
-      <h1 className="text-2xl font-bold">No data found</h1>
-      <p className="mt-3 text-slate-600">{VIN_NOT_FOUND_MESSAGE}</p>
-      <Link href="/" className="mt-6 inline-block rounded-lg bg-brand-600 px-4 py-2 text-white">
+    <div
+      style={{
+        padding: 64,
+        textAlign: 'center',
+        maxWidth: 560,
+        margin: '64px auto',
+        background: ink.panel,
+        borderRadius: 12,
+        border: `1px solid ${ink.border}`,
+      }}
+    >
+      <div
+        style={{
+          fontFamily: ink.mono,
+          fontSize: 11,
+          color: ink.salvage,
+          letterSpacing: '.15em',
+          marginBottom: 14,
+        }}
+      >
+        VIN NOT FOUND
+      </div>
+      <h1 style={{ margin: 0, fontSize: 28, fontWeight: 700, letterSpacing: '-0.02em' }}>
+        No data for that VIN
+      </h1>
+      <p style={{ marginTop: 10, color: ink.muted, fontSize: 14 }}>
+        Double-check the 17-character format and try again.
+      </p>
+      <Link
+        href="/"
+        className="ink-btn-primary"
+        style={{
+          marginTop: 24,
+          display: 'inline-block',
+          padding: '10px 20px',
+          borderRadius: 8,
+          fontSize: 14,
+          textDecoration: 'none',
+        }}
+      >
         Back to search
       </Link>
     </div>

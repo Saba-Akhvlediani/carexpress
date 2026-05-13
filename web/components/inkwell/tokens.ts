@@ -1,0 +1,26 @@
+export const ink = {
+  bg: '#EFEBE0',
+  panel: '#FFFFFF',
+  panel2: '#F5F1E6',
+  panel3: '#E5DFCE',
+  border: '#DCD4BE',
+  borderStrong: '#C2B89D',
+  text: '#1A1B1F',
+  textDim: '#3D3F45',
+  muted: '#6F6B5E',
+  mutedDim: '#9A9583',
+  accent: '#B8651E',
+  accentDim: '#8A4D17',
+  accentTint: '#F4E6D0',
+  clean: '#2F7A4F',
+  cleanTint: '#DCEBE0',
+  salvage: '#B33E29',
+  salvageTint: '#F4DDD6',
+  rebuilt: '#9A6D11',
+  rebuiltTint: '#F1E6CC',
+  info: '#2D5BA8',
+  sans: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif',
+  mono: '"JetBrains Mono", "SF Mono", "Menlo", monospace',
+} as const;
+
+export type Verdict = 'clean' | 'salvage' | 'rebuilt';
